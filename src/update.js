@@ -4,7 +4,6 @@ var jira = new JiraApi('https', 'jira.corp.delaval.com', '443', 'blomma', 'Bosel
 
 var issues = require('./resources/issues.json')
 
-console.log(issues);
 for (i = 0; i < issues.length; i++) {
 
 jira.findIssue(issues[i].key, function(error, issue) {
