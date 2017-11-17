@@ -1,0 +1,10 @@
+{
+  "user": "blomma",
+  "password": "Boselur1#",
+  "protocol": "https",
+  "url" : "jira.corp.delaval.com",
+  "port": "443",
+  "apiVersion": "2",
+  "strictSsl": "false",
+  "verbose": "true"
+}
