@@ -12,4 +12,6 @@ create a json file with the keys you wish to update
 
 `node updateGivenKeys`
 
-`node list.js --issues=./resources/testIssue.json`
+`node jiraUpdate.js --list --issues=./resources/testIssue.json`
+
+`node jiraUpdate.js --update --issues=./resources/updateIssue.json`
