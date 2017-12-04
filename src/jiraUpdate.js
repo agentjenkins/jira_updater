@@ -3,7 +3,14 @@ var props = require('../resources/props.json')
 var argv = require('minimist')(process.argv.slice(2))
 var list = require('./ops/list.js')
 var update = require('./ops/update.js')
-var jira = new JiraApi(props.protocol, props.url, props.port, props.user, props.password, props.apiVersion, props.verbose, props.strictSsl)
+var jira = new JiraApi(props.protocol,
+  props.url,
+  props.port,
+  props.user,
+  props.password,
+  props.apiVersion,
+  props.verbose,
+  props.strictSsl);
 
 // Require file containing issue keys
 var issues = require(argv.issues)
