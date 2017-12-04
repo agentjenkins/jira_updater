@@ -1,5 +1,5 @@
 JiraApi = require('jira').JiraApi
-var props = require('./resources/props.json')
+var props = require('../resources/props.json')
 var argv = require('minimist')(process.argv.slice(2))
 var list = require('./list.js');
 var update = require('./update.js');
