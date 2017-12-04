@@ -1,0 +1,11 @@
+// Rename to props.json
+{
+  "user": "Userid",
+  "password": "Password",
+  "protocol": "https",
+  "url" : "jira.corp.delaval.com",
+  "port": "443",
+  "apiVersion": "2",
+  "strictSsl": false,
+  "verbose": true
+}
