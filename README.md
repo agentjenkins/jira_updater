@@ -11,3 +11,5 @@ To update a list of given keys,
 create a json file with the keys you wish to update
 
 `node updateGivenKeys`
+
+`node list.js --issues=./resources/testIssue.json`
