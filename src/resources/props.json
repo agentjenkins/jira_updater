@@ -5,6 +5,6 @@
   "url" : "jira.corp.delaval.com",
   "port": "443",
   "apiVersion": "2",
-  "strictSsl": "false",
-  "verbose": "true"
+  "strictSsl": false,
+  "verbose": true
 }

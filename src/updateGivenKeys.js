@@ -1,9 +1,9 @@
 JiraApi = require('jira').JiraApi;
 var props = require('./resources/props.json');
 
-var jira = new JiraApi('https', 'jira.corp.delaval.com', '443', 'blomma', 'Boselur1#', '2', true, false);
+var jira = new JiraApi(props.protocol, props.url, props.port, props.user, props.password, props.apiVersion, props.verbose, props.strictSsl)
 
-var issues = require('./resources/bugs0minutes.json')
+var issues = require('./resources/reportItems1.json')
 
 for (i = 0; i < issues.length; i++) {
 console.log(issues[i].key);

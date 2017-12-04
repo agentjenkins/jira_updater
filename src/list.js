@@ -1,15 +1,7 @@
 JiraApi = require('jira').JiraApi;
 var props = require('./resources/props.json');
-//var jira = new JiraApi({protocol: 'https',
-//                        host: 'jira.corp.delaval.com',
-//                        port: '443',
-//                        username: 'blomma',
-//                        password: 'Boselur1#',
-//                        apiVersion: '2',
-//                        strictSSL: true,
-//                        verbose: true});
 
-var jira = new JiraApi('https', 'jira.corp.delaval.com', '443', 'blomma', 'Boselur1#', '2', false);
+var jira = new JiraApi(props.protocol, props.url, props.port, props.user, props.password, props.apiVersion, props.verbose, props.strictSsl);
 
 var issues = require('./resources/testIssue.json')
 
