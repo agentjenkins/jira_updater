@@ -10,8 +10,6 @@ For docs on how to write json for update,  see
 To update a list of given keys,
 create a json file with the keys you wish to update
 
-`node updateGivenKeys`
-
 `node jiraUpdate.js --list --issues=./resources/testIssue.json`
 
 `node jiraUpdate.js --update --issues=./resources/updateIssue.json`
