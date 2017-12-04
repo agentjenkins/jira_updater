@@ -1,4 +1,6 @@
-JiraApi = require('jira').JiraApi
+"use strict"
+
+var JiraApi = require('jira').JiraApi
 var props = require('../resources/props.json')
 var argv = require('minimist')(process.argv.slice(2))
 var list = require('./ops/list.js')
