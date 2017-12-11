@@ -1,2 +1,4 @@
 node_modules
 resources/props.json
+resources/tmp*
+src/ops/tmp*.*
