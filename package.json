@@ -9,8 +9,10 @@
   "author": "Marta",
   "license": "ISC",
   "dependencies": {
+    "fs": "0.0.1-security",
     "jira": "^0.9.2",
     "jira-client": "^6.4.0",
-    "minimist": "^1.2.0"
+    "minimist": "^1.2.0",
+    "request": "^2.83.0"
   }
 }

@@ -3,7 +3,7 @@ This small project can be used to bulk update Jira when jiras own bulk update do
 We are using npm package "jira" to help with the Jira access.
 
 For docs on how to write json for update,  see
-[jira api docs](node_modules/jira/docs/jira.html)
+[jira api docs](./node_modules/jira/docs/jira.html)
 
 ## Setup
 
