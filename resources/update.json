@@ -1,0 +1,11 @@
+{
+  'update': {
+    'timetracking': [
+      {
+        'edit': {
+          'originalEstimate': '8h'
+        }
+      }
+    ]
+  }
+}

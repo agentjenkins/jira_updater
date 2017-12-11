@@ -20,7 +20,7 @@ var issues = require(argv.issues)
 if (argv.list) {
   list(jira, issues)
 } else if (argv.update) {
-  update(jira, issues)
+  update(jira, issues, updateJson)
 } else {
   console.log('Unknown command, valid commands are --list --update')
 }

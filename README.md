@@ -6,6 +6,15 @@ For docs on how to write json for update,  see
 [jira api docs](node_modules/jira/docs/jira.html)
 
 ## Setup
+
+### Install node
+Download and install node.js from
+https://nodejs.org/en/download/
+
+### Download dependencies
+in the project root Run `npm install`
+
+### Credentials to JIRA
 Before using you need to provide credentials and urls to access Jira.  
 This is easiest done by copying the file `resources/propsTemplate.json` to a new file  `resources/props.json`
 This is a plain json files where you can modify the values to match your credentials.
