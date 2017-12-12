@@ -25,7 +25,7 @@ var JiraClient = require('jira-connector');
 var issues = require(argv.issues);
 
 if (argv.list) {
-  list(jira, issues)
+  list(jira, issues, argv)
 } else if (argv.update) {
 
   var updateJson = ""//fileReader.read(argv.updateJson);
