@@ -2,20 +2,24 @@
 
 var fs = require('fs');
 
-var JiraApi = require('jira').JiraApi
+require('ssl-root-cas').inject();
 var props = require('../resources/props.json')
 var argv = require('minimist')(process.argv.slice(2))
 var list = require('./ops/list.js')
 var update = require('./ops/update.js')
 var fileReader = require('./util/fileReader')
-var jira = new JiraApi(props.protocol,
-  props.url,
-  props.port,
-  props.user,
-  props.password,
-  props.apiVersion,
-  props.verbose,
-  props.strictSsl);
+var JiraClient = require('jira-connector');
+
+  var jira = new JiraClient( {
+      host: props.url,
+      protocol: props.protocol,
+      port: props.port,
+      basic_auth: {
+          username: props.user,
+          password: props.password
+      },
+      version: props.version
+  });
 
 // Require file containing issue keys
 var issues = require(argv.issues);

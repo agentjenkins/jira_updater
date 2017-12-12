@@ -2,7 +2,7 @@
 
 var list = function (jira, issues) {
   for (var i = 0; i < issues.length; i++) {
-    jira.findIssue(issues[i].key, function (error, issue) {
+    jira.issue.getIssue({issueKey: issues[i].key}, function (error, issue) {
       if (!error) {
         console.log('Status: ' + issue.fields.status.name)
         console.log(issue)
