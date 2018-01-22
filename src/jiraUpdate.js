@@ -41,7 +41,7 @@ if (argv.list) {
   console.log(updateJson);
   update(jira, issues, updateJson);
 } else if (argv.listVersions)
-  listVersions(jira, argv.projectKey);
+  listVersions(jira, argv.projectKey, argv.versionRegExp);
 else {
   console.log('Unknown command, valid commands are --list --update')
 }
