@@ -21,9 +21,20 @@ This is a plain json files where you can modify the values to match your credent
 
 ## Usage
 
-To update a list of given keys,
-create a json file with the keys you wish to update
+### List
+To list a number of given keys,
+create a json file with the keys you wish to list
 
 `node jiraUpdate.js --list --issues=../resources/testIssue.json`
 
+### Update
+To update a list of given keys,
+create a json file with the keys you wish to update
+
 `node jiraUpdate.js --update --issues=../resources/updateIssue.json`
+
+### List Versions
+List version for a specific project.
+Optionally filtering on regxp for matching version name
+
+`node jiraUpdate.js --listVersions --projectKey=DEL --versionRegExp=DDM`
