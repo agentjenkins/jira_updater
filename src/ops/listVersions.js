@@ -12,7 +12,7 @@ var listVersions = function(jira, projectKey, versionRegExp) {
         var version = project.versions[i];
         var regExp = new RegExp(versionRegExp);
         if (regExp.test(version.name)) {
-          console.log(version.name + ", " + (version.released ? version.releaseDate : "unreleased"));
+          console.log(version.name + ", " + (version.released ? "released" : "unreleased"));
         }
       }
     } else {
