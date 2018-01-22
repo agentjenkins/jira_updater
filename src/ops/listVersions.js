@@ -1,6 +1,6 @@
 'use strict'
 
-var listVersions = function(jira, projectKey, versionRegExp) {
+var listVersions = function(jira, projectKey, versionRegExp, argv) {
 
   var project = jira.project.getProject({
     'projectIdOrKey': projectKey
@@ -12,7 +12,11 @@ var listVersions = function(jira, projectKey, versionRegExp) {
         var version = project.versions[i];
         var regExp = new RegExp(versionRegExp);
         if (regExp.test(version.name)) {
-          console.log(version.name + ", " + (version.released ? "released" : "unreleased"));
+          if (argv.verbose) {
+            console.log(version)
+          } else {
+            console.log(version.name + ", " + (version.released ? "released" : "unreleased"));
+          }
         }
       }
     } else {

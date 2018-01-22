@@ -8,6 +8,7 @@ var argv = require('minimist')(process.argv.slice(2))
 var list = require('./ops/list.js')
 var update = require('./ops/update.js')
 var listVersions = require('./ops/listVersions.js')
+var releaseVersions = require('./ops/releaseVersions.js')
 var fileReader = require('./util/fileReader')
 var JiraClient = require('jira-connector');
 
@@ -40,8 +41,10 @@ if (argv.list) {
   var issues = getIssues(argv)
   console.log(updateJson);
   update(jira, issues, updateJson);
-} else if (argv.listVersions)
-  listVersions(jira, argv.projectKey, argv.versionRegExp);
-else {
+} else if (argv.listVersions) {
+  listVersions(jira, argv.projectKey, argv.versionRegExp, argv);
+} else if (argv.releaseVersions) {
+  releaseVersions(jira, argv.projectKey, argv.versionRegExp);
+} else {
   console.log('Unknown command, valid commands are --list --update')
 }
