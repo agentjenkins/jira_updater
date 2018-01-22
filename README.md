@@ -38,3 +38,10 @@ List version for a specific project.
 Optionally filtering on regxp for matching version name
 
 `node jiraUpdate.js --listVersions --projectKey=DEL --versionRegExp=DDM`
+
+### Release Versions
+Will release version/s for a specific project.
+Optionally filtering on regxp for matching version name
+Use with care!!
+
+`node jiraUpdate.js --listVersions --projectKey=DEL --versionRegExp=DDM`
